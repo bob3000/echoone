@@ -1,0 +1,10 @@
+{
+  "name": "@bob3000/echoone",
+  "repository": "github:bob3000/echoone",
+  "license": "UNLICENSED",
+  "version": "0.1.0",
+  "description": "echo some exclamation marks",
+  "bin": {
+    "echoone": "bin/echoone"
+  }
+}
