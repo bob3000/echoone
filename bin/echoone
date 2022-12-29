@@ -61,7 +61,5 @@ INSTANCE_ID=$(echo "$INSTANCE_ID_JSON_ARRAY" | jq -r --argjson index $RANDOM_ARR
 #LOCAL_PORT=$(getLocalFreePort)
 
 # do tunneling
-echo "!!!!!!!!!!!!!!!!!1 $(pwd)"
-
-ssh -L "$LOCAL_PORT:$REMOTE_HOST:$REMOTE_PORT" -o ExitOnForwardFailure=True -F ../ssh-config -fN "${INSTANCE_ID}" &&
+ssh -L "$LOCAL_PORT:$REMOTE_HOST:$REMOTE_PORT" -o ExitOnForwardFailure=True -F ssh-config -fN "${INSTANCE_ID}" &&
 	echo "$LOCAL_PORT" || echo "ERROR"
