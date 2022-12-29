@@ -1,0 +1,4 @@
+host i-*
+  User ubuntu
+  ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
+  IdentityFile ./devops-secrets/sandbox/ec2/id_ed25519
